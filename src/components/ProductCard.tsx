@@ -27,7 +27,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="group cursor-pointer">
       {/* Image */}
-      <div className="aspect-[3/4] overflow-hidden rounded-sm bg-muted mb-4">
+      <div className="aspect-[3/4] overflow-hidden rounded-lg bg-accent mb-4 shadow-sm group-hover:shadow-md transition-shadow duration-300">
         <img
           src={product.image}
           alt={product.name}
@@ -60,7 +60,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           onClick={handleAdd}
           size="sm"
           variant={added ? "secondary" : "default"}
-          className="text-xs uppercase tracking-wider"
+          className={`text-xs uppercase tracking-wider rounded-full ${!added ? "bg-primary hover:bg-primary/90" : ""}`}
         >
           {added ? (
             <>
