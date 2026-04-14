@@ -2,7 +2,6 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/products";
-import { Button } from "@/components/ui/button";
 
 const categories = [
   { key: "all", label: "All" },
@@ -24,32 +23,45 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="border-b">
-        <div className="container mx-auto px-6 py-20 md:py-28 text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-6">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/60 via-background to-secondary/40" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-56 h-56 bg-primary/5 rounded-full blur-2xl" />
+        <div className="relative container mx-auto px-6 py-24 md:py-36 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-6 inline-flex items-center gap-2">
+            <span className="w-8 h-px bg-primary/50" />
             Handcrafted Crochet Collection
+            <span className="w-8 h-px bg-primary/50" />
           </p>
-          <h2 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-[1.1] mb-6">
-            Threadora
+          <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.05] mb-6">
+            Flowers That
+            <br />
+            <span className="text-primary">Never Wilt</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
-            This is our collection of handcrafted crochet flowers. Each piece is carefully made with love — flowers that never wilt, gifts that last forever.
+          <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed mb-10">
+            Each piece is carefully handcrafted with love — eternal blooms, timeless gifts, made just for you.
           </p>
+          <a
+            href="#products"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity"
+          >
+            Shop Now
+          </a>
         </div>
       </section>
 
       {/* Filter Bar */}
-      <section id="categories" className="border-b">
+      <section id="categories" className="border-b border-t">
         <div className="container mx-auto px-6 py-5">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((cat) => (
               <button
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
-                className={`text-xs uppercase tracking-[0.15em] font-semibold px-5 py-2.5 rounded-full transition-all duration-200 ${
+                className={`text-xs uppercase tracking-[0.15em] font-semibold px-6 py-2.5 rounded-full transition-all duration-300 ${
                   activeCategory === cat.key
-                    ? "bg-foreground text-background"
-                    : "bg-transparent text-muted-foreground hover:text-foreground border border-border"
+                    ? "bg-primary text-primary-foreground shadow-md"
+                    : "bg-transparent text-muted-foreground hover:text-primary hover:bg-accent border border-border"
                 }`}
               >
                 {cat.label}
@@ -69,10 +81,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t">
-        <div className="container mx-auto px-6 py-12 text-center">
-          <h3 className="font-display text-2xl font-bold text-foreground mb-2">Threadora</h3>
-          <p className="text-sm text-muted-foreground">
+      <footer className="bg-foreground text-primary-foreground">
+        <div className="container mx-auto px-6 py-14 text-center">
+          <img src="/images/threadora-logo.png" alt="Threadora" className="h-12 mx-auto mb-4 brightness-200" />
+          <p className="text-sm opacity-70">
             © 2026 Threadora. All pieces handmade with ❤️
           </p>
         </div>
