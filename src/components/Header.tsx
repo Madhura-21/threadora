@@ -6,7 +6,7 @@ const Header = () => {
     <>
       {/* Announcement Bar */}
       <div className="bg-foreground text-background text-xs tracking-widest uppercase text-center py-2.5 font-medium">
-        Free Shipping Over ₹500 · Handmade with Love 🧶
+        Free Shipping Over ₹500 · Handmade with Love by Threadora 🧶
       </div>
 
       {/* Main Header */}
@@ -24,9 +24,9 @@ const Header = () => {
 
           {/* Logo Center */}
           <div className="flex flex-col items-center">
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-wide">
-              Crochet Bloom
-            </h1>
+            <a href="/">
+              <img src="/images/threadora-logo.png" alt="Threadora" className="h-14 md:h-16 w-auto" />
+            </a>
           </div>
 
           {/* Actions Right */}
