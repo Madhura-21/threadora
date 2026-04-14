@@ -23,38 +23,45 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="container mx-auto px-4 py-16 text-center space-y-4">
-        <p className="text-sm uppercase tracking-widest text-primary font-semibold">
-          Handmade with love
-        </p>
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight">
-          Beautiful Crochet<br />Flowers & Gifts
-        </h2>
-        <p className="text-muted-foreground max-w-md mx-auto">
-          Each piece is carefully handcrafted — flowers that never wilt, gifts that last forever.
-        </p>
+      {/* Hero Section */}
+      <section className="border-b">
+        <div className="container mx-auto px-6 py-20 md:py-28 text-center">
+          <p className="text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-6">
+            Handcrafted Crochet Collection
+          </p>
+          <h2 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-[1.1] mb-6">
+            Crochet Flower
+          </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
+            This is our collection of handcrafted crochet flowers. Each piece is carefully made with love — flowers that never wilt, gifts that last forever.
+          </p>
+        </div>
       </section>
 
-      {/* Filters */}
-      <section className="container mx-auto px-4 pb-4">
-        <div className="flex flex-wrap gap-2 justify-center">
-          {categories.map((cat) => (
-            <Button
-              key={cat.key}
-              variant={activeCategory === cat.key ? "default" : "outline"}
-              size="sm"
-              onClick={() => setActiveCategory(cat.key)}
-            >
-              {cat.label}
-            </Button>
-          ))}
+      {/* Filter Bar */}
+      <section id="categories" className="border-b">
+        <div className="container mx-auto px-6 py-5">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {categories.map((cat) => (
+              <button
+                key={cat.key}
+                onClick={() => setActiveCategory(cat.key)}
+                className={`text-xs uppercase tracking-[0.15em] font-semibold px-5 py-2.5 rounded-full transition-all duration-200 ${
+                  activeCategory === cat.key
+                    ? "bg-foreground text-background"
+                    : "bg-transparent text-muted-foreground hover:text-foreground border border-border"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Products Grid */}
-      <section className="container mx-auto px-4 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <section id="products" className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -62,8 +69,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8 text-center text-sm text-muted-foreground">
-        <p>© 2026 Crochet Bloom. All pieces handmade with ❤️</p>
+      <footer className="border-t">
+        <div className="container mx-auto px-6 py-12 text-center">
+          <h3 className="font-display text-2xl font-bold text-foreground mb-2">Crochet Bloom</h3>
+          <p className="text-sm text-muted-foreground">
+            © 2026 Crochet Bloom. All pieces handmade with ❤️
+          </p>
+        </div>
       </footer>
     </div>
   );

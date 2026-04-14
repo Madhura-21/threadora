@@ -8,6 +8,12 @@ interface ProductCardProps {
   product: Product;
 }
 
+const categoryLabels: Record<string, string> = {
+  keychain: "KEYCHAIN",
+  "flower-pot": "FLOWER POT",
+  bouquet: "BOUQUET",
+};
+
 const ProductCard = ({ product }: ProductCardProps) => {
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
@@ -19,39 +25,50 @@ const ProductCard = ({ product }: ProductCardProps) => {
   };
 
   return (
-    <div className="group rounded-xl overflow-hidden bg-card border border-border hover:shadow-lg transition-all duration-300">
-      <div className="aspect-square overflow-hidden bg-muted">
+    <div className="group cursor-pointer">
+      {/* Image */}
+      <div className="aspect-[3/4] overflow-hidden rounded-sm bg-muted mb-4">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
           loading="lazy"
         />
       </div>
-      <div className="p-4 space-y-2">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="font-display text-lg font-semibold text-foreground leading-tight">
-            {product.name}
-          </h3>
-          <span className="font-display text-lg font-bold text-primary whitespace-nowrap">
-            ₹{product.price}
-          </span>
-        </div>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {product.description}
-        </p>
+
+      {/* Category Badge */}
+      <span className="inline-block text-[10px] font-bold tracking-[0.15em] uppercase text-primary mb-2">
+        {categoryLabels[product.category] || product.category}
+      </span>
+
+      {/* Title */}
+      <h3 className="font-display text-xl font-semibold text-foreground leading-tight mb-1">
+        {product.name}
+      </h3>
+
+      {/* Description */}
+      <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2">
+        {product.description}
+      </p>
+
+      {/* Price + Add */}
+      <div className="flex items-center justify-between">
+        <span className="font-display text-lg font-bold text-foreground">
+          ₹{product.price}
+        </span>
         <Button
           onClick={handleAdd}
-          className="w-full mt-2"
+          size="sm"
           variant={added ? "secondary" : "default"}
+          className="text-xs uppercase tracking-wider"
         >
           {added ? (
             <>
-              <Check className="w-4 h-4" /> Added!
+              <Check className="w-3.5 h-3.5" /> Added
             </>
           ) : (
             <>
-              <ShoppingBag className="w-4 h-4" /> Add to Cart
+              <ShoppingBag className="w-3.5 h-3.5" /> Add to Cart
             </>
           )}
         </Button>
