@@ -30,7 +30,7 @@ const Index = () => {
             Handcrafted Crochet Collection
           </p>
           <h2 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-[1.1] mb-6">
-            Crochet Flower
+            Threadora
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
             This is our collection of handcrafted crochet flowers. Each piece is carefully made with love — flowers that never wilt, gifts that last forever.
@@ -71,9 +71,9 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t">
         <div className="container mx-auto px-6 py-12 text-center">
-          <h3 className="font-display text-2xl font-bold text-foreground mb-2">Crochet Bloom</h3>
+          <h3 className="font-display text-2xl font-bold text-foreground mb-2">Threadora</h3>
           <p className="text-sm text-muted-foreground">
-            © 2026 Crochet Bloom. All pieces handmade with ❤️
+            © 2026 Threadora. All pieces handmade with ❤️
           </p>
         </div>
       </footer>
