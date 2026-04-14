@@ -9,7 +9,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo Left */}
           <div className="flex items-center">
