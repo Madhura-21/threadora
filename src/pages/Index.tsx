@@ -19,7 +19,16 @@ const Index = () => {
       : products.filter((p) => p.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Watermark background */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0 opacity-[0.04]"
+        style={{
+          backgroundImage: 'url(/images/threadora-logo.png)',
+          backgroundSize: '200px',
+          backgroundRepeat: 'repeat',
+        }}
+      />
       <Header />
 
       {/* Hero Section */}
