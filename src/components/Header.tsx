@@ -11,9 +11,14 @@ const Header = () => {
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          {/* Brand Name */}
-          <a href="/" className="font-display text-2xl font-bold text-foreground tracking-wide">
-            Threadora
+          {/* Brand Logo & Name */}
+          <a href="/" className="flex items-center gap-2.5">
+            <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-primary/20 flex-shrink-0">
+              <img src="/images/threadora-logo.png" alt="Threadora" className="w-full h-full object-cover scale-125" />
+            </div>
+            <span className="font-display text-2xl font-bold text-foreground tracking-wide">
+              Threadora
+            </span>
           </a>
 
           {/* Nav Links Center */}
