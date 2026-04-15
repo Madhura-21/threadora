@@ -22,7 +22,7 @@ const Index = () => {
     <div className="min-h-screen bg-background relative">
       {/* Watermark background */}
       <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-[0.04]"
+        className="fixed inset-0 pointer-events-none z-0 opacity-[0.08]"
         style={{
           backgroundImage: 'url(/images/threadora-logo.png)',
           backgroundSize: '200px',
@@ -37,6 +37,9 @@ const Index = () => {
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-56 h-56 bg-primary/5 rounded-full blur-2xl" />
         <div className="relative container mx-auto px-6 py-24 md:py-36 text-center">
+          <h1 className="font-display text-4xl md:text-5xl italic text-primary mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            Threadora
+          </h1>
           <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-6 inline-flex items-center gap-2">
             <span className="w-8 h-px bg-primary/50" />
             Handcrafted Crochet Collection
@@ -92,7 +95,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-foreground text-primary-foreground">
         <div className="container mx-auto px-6 py-14 text-center">
-          <img src="/images/threadora-logo.png" alt="Threadora" className="h-12 mx-auto mb-4 brightness-200" />
+          <img src="/images/threadora-logo.png" alt="Threadora" className="h-14 mx-auto mb-4 invert brightness-200" />
           <p className="text-sm opacity-70">
             © 2026 Threadora. All pieces handmade with ❤️
           </p>
