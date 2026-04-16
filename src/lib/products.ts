@@ -107,7 +107,7 @@ export const products: Product[] = [
   {
     id: "totoro-keychain",
     name: "Totoro Keychain",
-    price: 179,
+    price: 200,
     description: "A cute crochet Totoro with a green leaf on its head — a must-have for Studio Ghibli fans.",
     category: "keychain",
     image: "/images/totoro-keychain.jpg",
@@ -115,7 +115,7 @@ export const products: Product[] = [
   {
     id: "coffee-cup-keychain",
     name: "Coffee Cup Keychain",
-    price: 149,
+    price: 180,
     description: "A tiny crochet coffee cup with a happy face — the cutest companion for coffee lovers.",
     category: "keychain",
     image: "/images/coffee-cup-keychain.jpg",
@@ -123,7 +123,7 @@ export const products: Product[] = [
   {
     id: "bee-keychain",
     name: "Bee Keychain",
-    price: 159,
+    price: 160,
     description: "A cheerful crochet bee with fluffy white wings — sweet, buzzy, and irresistibly cute.",
     category: "keychain",
     image: "/images/bee-keychain.jpg",
@@ -147,7 +147,7 @@ export const products: Product[] = [
   {
     id: "sunflower-keychain",
     name: "Sunflower Keychain",
-    price: 169,
+    price: 150,
     description: "A pair of bright crochet sunflowers with a green leaf — a cheerful accessory for your keys.",
     category: "keychain",
     image: "/images/sunflower-keychain.jpg",
@@ -155,7 +155,7 @@ export const products: Product[] = [
   {
     id: "penguin-keychain",
     name: "Penguin Keychain",
-    price: 159,
+    price: 180,
     description: "An adorable blue crochet penguin with a yellow beak — a tiny friend to carry everywhere.",
     category: "keychain",
     image: "/images/penguin-keychain.jpg",
