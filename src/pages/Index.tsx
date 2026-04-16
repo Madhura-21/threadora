@@ -6,6 +6,7 @@ import { products } from "@/lib/products";
 const categories = [
   { key: "all", label: "All" },
   { key: "keychain", label: "Keychains" },
+  { key: "flower", label: "Flowers" },
   { key: "flower-pot", label: "Flower Pots" },
   { key: "bouquet", label: "Bouquets" },
 ] as const;
@@ -96,7 +97,9 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-foreground text-primary-foreground">
         <div className="container mx-auto px-6 py-14 text-center">
-          <img src="/images/threadora-logo-white.png" alt="Threadora" className="h-14 mx-auto mb-4" />
+          <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden bg-white">
+            <img src="/images/threadora-logo.png" alt="Threadora" className="w-full h-full object-cover scale-125" />
+          </div>
           <p className="text-sm opacity-70">
             © 2026 Threadora. All pieces handmade with ❤️
           </p>

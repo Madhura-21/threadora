@@ -16,9 +16,6 @@ const Header = () => {
             <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-primary/20 flex-shrink-0">
               <img src="/images/threadora-logo.png" alt="Threadora" className="w-full h-full object-cover scale-125" />
             </div>
-            <span className="font-display text-2xl font-bold text-foreground tracking-wide">
-              Threadora
-            </span>
           </a>
 
           {/* Nav Links Center */}
