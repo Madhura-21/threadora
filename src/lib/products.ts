@@ -37,7 +37,7 @@ export const products: Product[] = [
     name: "Bunny Flower",
     price: 249,
     description: "An adorable crochet flower with a cute bunny face and carrot crown. A perfect gift for kids!",
-    category: "keychain",
+    category: "flower",
     image: "/images/bunny-flower.jpg",
   },
   {
