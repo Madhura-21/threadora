@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  category: "keychain" | "flower-pot" | "bouquet";
+  category: "keychain" | "flower-pot" | "bouquet" | "flower";
   image: string;
 }
 

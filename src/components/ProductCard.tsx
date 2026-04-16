@@ -12,6 +12,7 @@ const categoryLabels: Record<string, string> = {
   keychain: "KEYCHAIN",
   "flower-pot": "FLOWER POT",
   bouquet: "BOUQUET",
+  flower: "FLOWER",
 };
 
 const ProductCard = ({ product }: ProductCardProps) => {
