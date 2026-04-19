@@ -4,7 +4,7 @@ import { useCart } from "@/lib/cart";
 import { ShoppingBag, Plus, Minus, Trash2, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 
-const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // TODO: Replace XXXXXXXXXX with your 10-digit number
+const WHATSAPP_NUMBER = "919422141782";
 
 const CartSheet = () => {
   const { items, totalItems, totalPrice, updateQuantity, removeFromCart, clearCart } = useCart();
