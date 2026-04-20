@@ -1,7 +1,33 @@
-import { useState } from "react"; 
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/products";
+
+const SITE_URL = "https://threadora.lovable.app";
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: products.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Product",
+      name: p.name,
+      description: p.description,
+      image: `${SITE_URL}${p.image.startsWith("/") ? p.image : "/" + p.image}`,
+      category: p.category,
+      brand: { "@type": "Brand", name: "Threadora" },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: p.price,
+        availability: "https://schema.org/InStock",
+        url: `${SITE_URL}/#products`,
+      },
+    },
+  })),
+};
 
 const categories = [
   { key: "all", label: "All" },
@@ -18,6 +44,18 @@ const Index = () => {
     activeCategory === "all"
       ? products
       : products.filter((p) => p.category === activeCategory);
+
+  useEffect(() => {
+    const id = "products-jsonld";
+    let tag = document.getElementById(id) as HTMLScriptElement | null;
+    if (!tag) {
+      tag = document.createElement("script");
+      tag.type = "application/ld+json";
+      tag.id = id;
+      document.head.appendChild(tag);
+    }
+    tag.text = JSON.stringify(productJsonLd);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background relative">
