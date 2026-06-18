@@ -3,11 +3,45 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  category: "keychain" | "flower-pot" | "bouquet" | "flower";
+  category: "keychain" | "flower-pot" | "bouquet" | "flower" | "scrunchie";
   image: string;
 }
 
 export const products: Product[] = [
+  // SCRUNCHIES
+  {
+    id: "scrunchie-set-of-three",
+    name: "Scrunchie Set of Three",
+    price: 449,
+    description: "A set of three handmade crochet ruffle scrunchies in purple, burgundy, and cream with green trim — a charming bundle and the best value.",
+    category: "scrunchie",
+    image: "/images/scrunchie-set-of-three.jpg",
+  },
+  {
+    id: "scrunchie-burgundy",
+    name: "Burgundy Scrunchie",
+    price: 149,
+    description: "A handmade crochet ruffle scrunchie in rich burgundy with a delicate white picot edge. Priced per piece.",
+    category: "scrunchie",
+    image: "/images/scrunchie-burgundy.jpg",
+  },
+  {
+    id: "scrunchie-purple",
+    name: "Purple Scrunchie",
+    price: 149,
+    description: "A handmade crochet ruffle scrunchie in soft purple with a white picot edge — playful and pretty. Priced per piece.",
+    category: "scrunchie",
+    image: "/images/scrunchie-purple.jpg",
+  },
+  {
+    id: "scrunchie-cream-green",
+    name: "Cream & Green Scrunchie",
+    price: 149,
+    description: "A handmade crochet ruffle scrunchie in cream with fresh green trim — soft and springy. Priced per piece.",
+    category: "scrunchie",
+    image: "/images/scrunchie-cream-green.jpg",
+  },
+
   // BOUQUETS
   {
     id: "sunflower-bouquet",

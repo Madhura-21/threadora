@@ -21,9 +21,10 @@ const categoryLabels: Record<string, string> = {
   "flower-pot": "FLOWER POT",
   bouquet: "BOUQUET",
   flower: "FLOWER",
+  scrunchie: "SCRUNCHIE",
 };
 
-const PER_PIECE_CATEGORIES = new Set(["flower", "keychain"]);
+const PER_PIECE_CATEGORIES = new Set(["flower", "keychain", "scrunchie"]);
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const { addToCart } = useCart();
