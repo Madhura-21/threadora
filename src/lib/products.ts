@@ -20,7 +20,7 @@ export const products: Product[] = [
   {
     id: "scrunchie-burgundy",
     name: "Burgundy Scrunchie",
-    price: 149,
+    price: 199,
     description: "A handmade crochet ruffle scrunchie in rich burgundy with a delicate white picot edge. Priced per piece.",
     category: "scrunchie",
     image: "/images/scrunchie-burgundy.jpg",
@@ -28,7 +28,7 @@ export const products: Product[] = [
   {
     id: "scrunchie-purple",
     name: "Purple Scrunchie",
-    price: 149,
+    price: 199,
     description: "A handmade crochet ruffle scrunchie in soft purple with a white picot edge — playful and pretty. Priced per piece.",
     category: "scrunchie",
     image: "/images/scrunchie-purple.jpg",
@@ -36,7 +36,7 @@ export const products: Product[] = [
   {
     id: "scrunchie-cream-green",
     name: "Cream & Green Scrunchie",
-    price: 149,
+    price: 199,
     description: "A handmade crochet ruffle scrunchie in cream with fresh green trim — soft and springy. Priced per piece.",
     category: "scrunchie",
     image: "/images/scrunchie-cream-green.jpg",
