@@ -32,6 +32,7 @@ const productJsonLd = {
 const categories = [
   { key: "all", label: "All" },
   { key: "keychain", label: "Keychains" },
+  { key: "scrunchie", label: "Scrunchies" },
   { key: "flower", label: "Flowers" },
   { key: "flower-pot", label: "Flower Pots" },
   { key: "bouquet", label: "Bouquets" },

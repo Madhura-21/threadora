@@ -21,16 +21,18 @@ const categoryLabels: Record<string, string> = {
   "flower-pot": "FLOWER POT",
   bouquet: "BOUQUET",
   flower: "FLOWER",
+  scrunchie: "SCRUNCHIE",
 };
 
-const PER_PIECE_CATEGORIES = new Set(["flower", "keychain"]);
+const PER_PIECE_CATEGORIES = new Set(["flower", "keychain", "scrunchie"]);
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const isPerPiece = PER_PIECE_CATEGORIES.has(product.category);
+  const isSet = product.name.toLowerCase().includes("set of");
+  const isPerPiece = PER_PIECE_CATEGORIES.has(product.category) && !isSet;
 
   const handleAdd = () => {
     addToCart(product);
