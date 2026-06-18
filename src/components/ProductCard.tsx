@@ -31,7 +31,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const [added, setAdded] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const isPerPiece = PER_PIECE_CATEGORIES.has(product.category);
+  const isSet = product.name.toLowerCase().includes("set of");
+  const isPerPiece = PER_PIECE_CATEGORIES.has(product.category) && !isSet;
 
   const handleAdd = () => {
     addToCart(product);
